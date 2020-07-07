@@ -1,0 +1,237 @@
+@import "_reset.scss";
+@import "_variables.scss";
+@import "_mixins.scss";
+
+body {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: $fontsecondary;
+  font-weight: 300;
+}
+
+h3 {
+  color: $headercolor;
+  letter-spacing: 3px;
+}
+
+main,
+header {
+  margin: 0 auto;
+}
+
+header {
+  position: relative;
+  outline: none;
+  background-image: linear-gradient(
+    to right top,
+    #bf34c8,
+    #e82fa3,
+    #fa4781,
+    #fd6768,
+    #f6875b
+  );
+  width: 100vw;
+}
+nav {
+  text-align: center;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#projects,
+#company,
+#experience,
+#second-hero,
+#contact {
+  margin: 150px auto 0;
+  position: relative;
+}
+
+#projects {
+  h3 {
+    color: $headercolor;
+    letter-spacing: 3px;
+    &::before {
+      left: -30px;
+      @include before;
+      content: "1 .";
+    }
+  }
+}
+#company {
+  h3 {
+    color: $headercolor;
+    letter-spacing: 3px;
+    &::before {
+      left: 520px;
+      @include before;
+      content: "2 .";
+    }
+  }
+}
+#experience {
+  h3 {
+    color: $headercolor;
+    letter-spacing: 3px;
+    &::before {
+      left: -50px;
+      @include before;
+      content: "3 .";
+    }
+  }
+}
+.wrapper {
+  position: relative;
+  margin: 0 auto;
+}
+.section-wrapper {
+  max-width: 1240px;
+  div {
+    flex-basis: 35%;
+    padding: 50px;
+  }
+  img {
+    object-fit: cover;
+    width: 80%;
+  }
+  .section-text {
+    color: $pageBackgroundColour;
+  }
+}
+.wrapper,
+.section-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+//hero wrapper
+#hero-slogan {
+  text-align: center;
+  color: white;
+  height: 300px;
+  h1 {
+    margin: 0 auto;
+    font-size: 150px;
+    width: 100%;
+    &::before {
+      content: url("../../src/img/wave-top.svg");
+      position: absolute;
+      top: 270px;
+      right: -10px;
+      width: 500px;
+      height: auto;
+    }
+  }
+  h4 {
+    letter-spacing: 2px;
+    margin-top: 0;
+    margin-bottom: 100px;
+    &::before {
+      content: url("../../src/img/wave-top2.svg");
+      position: absolute;
+      top: 280px;
+      right: 0;
+      width: 300px;
+      height: auto;
+    }
+  }
+}
+// section our crazy ideas
+
+#second-hero {
+  position: relative;
+  height: 300px;
+  width: 100vw;
+  background-image: url(../../src/img/fullbg.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  h2 {
+    text-align: center;
+    line-height: 150%;
+    color: white;
+    font-size: 80px;
+    &::before {
+      content: url("../../src/img/wave-bottom.svg");
+      position: absolute;
+      top: 250px;
+      left: 0;
+      width: 800px;
+      height: auto;
+    }
+  }
+}
+
+.btn {
+  @include button;
+}
+
+#contact {
+  height: 500px;
+  width: 100vw;
+  background-image: linear-gradient(
+    to right top,
+    #bf34c8,
+    #e82fa3,
+    #fa4781,
+    #fd6768,
+    #f6875b
+  );
+  .section-wrapper {
+    margin: 0 auto;
+  }
+  h2 {
+    color: $headercolor;
+    font-size: 70px;
+  }
+  #form {
+    font: inherit;
+    form {
+      display: flex;
+      width: 70%;
+      flex-wrap: wrap;
+      label,
+      input,
+      textarea {
+        width: 100%;
+        padding-bottom: 10px;
+      }
+      input {
+        border-bottom: 2px solid $headercolor;
+        margin-bottom: 30px;
+      }
+      textarea {
+        border: 2px solid $headercolor;
+      }
+      .btn {
+        color: white;
+        border: 2px solid white;
+        padding: 10px 40px;
+      }
+    }
+  }
+}
+
+footer {
+  position: relative;
+  .footnote {
+    font-size: 12px;
+    color: white;
+    width: 100vw;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
